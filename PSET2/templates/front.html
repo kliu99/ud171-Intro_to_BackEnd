@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Blog</title>
+	</head>
+	<body>
+		<h1>Blog</h1>
+
+		{% for article in articles %}
+			<hr>
+			<h3> <a href="/{{article.key().id()}}"> {{article.subject}} </a></h3>
+			<h4> {{article.time.strftime("%b %d, %Y")}}</h4>
+			{{article.content}}
+		{% endfor %}
+	</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{article.subject}}</title>
+	</head>
+
+	<body>
+		<h2>{{article.subject}}</h2>
+		<h4>{{article.time.strftime("%b %d, %Y")}}</h4>
+		<hr>
+		{{article._render_text | safe}}
+	</body>
+
+</html>
